@@ -1,132 +1,141 @@
-<?php ?>
-
 <?if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die(); ?>
 <?IncludeTemplateLangFile(__FILE__);?>
 
-<html>
+<!DOCTYPE html>
+<html lang="<?=LANGUAGE_ID?>" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Hosting Company</title>
+    <title="<?$APPLICATION->ShowTitle();?>">Rackhost Hosting & Business Theme</title>
     <?$APPLICATION->ShowHead();?>
-    <!-- ImageReady Preload Script (index.psd) -->
-    <script type="text/javascript">
-        <!--
-
-        function newImage(arg) {
-            if (document.images) {
-                rslt = new Image();
-                rslt.src = arg;
-                return rslt;
-            }
-        }
-
-        function changeImages() {
-            if (document.images && (preloadFlag == true)) {
-                for (var i=0; i<changeImages.arguments.length; i+=2) {
-                    document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
-                }
-            }
-        }
-
-        var preloadFlag = false;
-        function preloadImages() {
-            if (document.images) {
-                home_over = newImage("<?=SITE_TEMPLATE_PATH;?>/images/home-over.jpg");
-                company_over = newImage("<?=SITE_TEMPLATE_PATH;?>/images/company-over.jpg");
-                hosting_over = newImage("<?=SITE_TEMPLATE_PATH;?>/images/hosting-over.jpg");
-                contacts_over = newImage("<?=SITE_TEMPLATE_PATH;?>/images/contacts-over.jpg");
-                preloadFlag = true;
-            }
-        }
-
-        // -->
-    </script>
-    <!-- End Preload Script -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Stylesheets -->
+    <link href="<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/_include/css/rackhost.css", true);?>" rel="stylesheet" type="text/css" />
+    <!-- Javascripts -->
+    <script src="<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/_include/js/jquery-1.7.2.min.js", true);?> type="text/javascript"></script>
+    <script src="<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/_include/js/rackhost.js", true);?>" type="text/javascript"></script>
 </head>
-<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/_include/css/styles.css", true);?>
-<center>
-    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="preloadImages();">
-    <?$APPLICATION->ShowPanel();?>
-    <!-- ImageReady Slices (index.psd) -->
-    <table id="Table_01" width="776" height="681" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td rowspan="14">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/m1.jpg" width="58" height="680" alt=""></td>
-            <td colspan="10">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/title.jpg" width="393" height="96" alt=""></td>
-            <td colspan="5" rowspan="4">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/m3.jpg" width="259" height="267" alt=""></td>
-            <td rowspan="14">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/m2.jpg" width="65" height="680" alt=""></td>
-            <td>
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/spacer.gif" width="1" height="96" alt=""></td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/sp1.jpg" width="183" height="42" alt=""></td>
-            <td colspan="2" rowspan="3">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/sp5.jpg" width="58" height="171" alt=""></td>
-            <td colspan="3">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/bp1.jpg" width="152" height="42" alt=""></td>
-            <td>
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/spacer.gif" width="1" height="42" alt=""></td>
-        </tr>
-        <tr>
-            <td rowspan="2">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/sp2.jpg" width="29" height="129" alt=""></td>
-            <td colspan="2" align="left" valign="top" background="<?=SITE_TEMPLATE_PATH;?>/images/b_sp.jpg">300 Mb Space<br>
-                15 Gb Tranfer<br>
-                20 POP3 E-mail<br>
-                C-Panel</td>
-            <td colspan="2" rowspan="2" align="left" valign="top">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/sp4.jpg" width="56" height="129" alt=""></td>
-            <td colspan="2" align="left" valign="top" background="<?=SITE_TEMPLATE_PATH;?>/images/b_bp.jpg">500 Mb Space<br>
-                20 Gb Tranfer<br>
-                30 POP3 E-mail<br>
-                C-Panel</td>
-            <td rowspan="2">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/bp3.jpg" width="53" height="129" alt=""></td>
-            <td>
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/spacer.gif" width="1" height="49" alt=""></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/sp3.jpg" width="98" height="80" alt=""></td>
-            <td colspan="2">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/bp2.jpg" width="99" height="80" alt=""></td>
-            <td>
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/spacer.gif" width="1" height="80" alt=""></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <a href="#"
-                   onmouseover="window.status='home'; changeImages('home', '<?=SITE_TEMPLATE_PATH;?>/images/home-over.jpg'); return true;"
-                   onmouseout="window.status=''; changeImages('home', '<?=SITE_TEMPLATE_PATH;?>/images/home.jpg'); return true;"
-                   onmousedown="changeImages('home', '<?=SITE_TEMPLATE_PATH;?>/images/home-over.jpg'); return true;"
-                   onmouseup="changeImages('home', '<?=SITE_TEMPLATE_PATH;?>/images/home-over.jpg'); return true;">
-                    <img name="home" src="<?=SITE_TEMPLATE_PATH;?>/images/home.jpg" width="101" height="54" border="0" alt="home"></a></td>
-            <td colspan="4">
-                <a href="#"
-                   onmouseover="window.status='company'; changeImages('company', '<?=SITE_TEMPLATE_PATH;?>/images/company-over.jpg'); return true;"
-                   onmouseout="window.status=''; changeImages('company', '<?=SITE_TEMPLATE_PATH;?>/images/company.jpg'); return true;"
-                   onmousedown="changeImages('company', '<?=SITE_TEMPLATE_PATH;?>/images/company-over.jpg'); return true;"
-                   onmouseup="changeImages('company', '<?=SITE_TEMPLATE_PATH;?>/images/company-over.jpg'); return true;">
-                    <img name="company" src="<?=SITE_TEMPLATE_PATH;?>/images/company.jpg" width="117" height="54" border="0" alt="company"></a></td>
-            <td colspan="2">
-                <a href="#"
-                   onmouseover="window.status='hosting'; changeImages('hosting', '<?=SITE_TEMPLATE_PATH;?>/images/hosting-over.jpg'); return true;"
-                   onmouseout="window.status=''; changeImages('hosting', '<?=SITE_TEMPLATE_PATH;?>/images/hosting.jpg'); return true;"
-                   onmousedown="changeImages('hosting', '<?=SITE_TEMPLATE_PATH;?>/images/hosting-over.jpg'); return true;"
-                   onmouseup="changeImages('hosting', '<?=SITE_TEMPLATE_PATH;?>/images/hosting-over.jpg'); return true;">
-                    <img name="hosting" src="<?=SITE_TEMPLATE_PATH;?>/images/hosting.jpg" width="108" height="54" border="0" alt="hosting"></a></td>
-            <td colspan="4">
-                <a href="#"
-                   onmouseover="window.status='contacts'; changeImages('contacts', '<?=SITE_TEMPLATE_PATH;?>/images/contacts-over.jpg'); return true;"
-                   onmouseout="window.status=''; changeImages('contacts', '<?=SITE_TEMPLATE_PATH;?>/images/contacts.jpg'); return true;"
-                   onmousedown="changeImages('contacts', '<?=SITE_TEMPLATE_PATH;?>/images/contacts-over.jpg'); return true;"
-                   onmouseup="changeImages('contacts', '<?=SITE_TEMPLATE_PATH;?>/images/contacts-over.jpg'); return true;">
-                    <img name="contacts" src="<?=SITE_TEMPLATE_PATH;?>/images/contacts.jpg" width="100" height="54" border="0" alt="v"></a></td>
-            <td colspan="3">
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/m4.jpg" width="226" height="54" alt=""></td>
-            <td>
-                <img src="<?=SITE_TEMPLATE_PATH;?>/images/spacer.gif" width="1" height="54" alt=""></td>
-        </tr>
+<body>
+<?$APPLICATION->ShowPanel();?>
+<!-- Site Wrapper Start -->
+<div class="siteWrapper">
+    <!-- Site Header -->
+    <div class="siteHeaderShadow">
+    </div>
+    <div class="siteHeader">
+        <div class="center">
+            <a class="logo" href="<?=SITE_TEMPLATE_PATH;?>/index.html"></a>
+            <ul class="navigation">
+                <li>
+                    <a href="<?=SITE_TEMPLATE_PATH;?>/shared.html"><strong>Shared</strong> Hosting<br /><span>cPanel powered</span></a>
+                </li>
+                <li>
+                    <a class="dropdown" href="<?=SITE_TEMPLATE_PATH;?>/virtual.html"><strong>Virtual</strong> Servers<br /><span>OpenVZ or Xen</span></a>
+                    <ul class="dropdown">
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/virtual.html"><strong>OpenVZ</strong> Dallas, TX</a></li>
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/virtual.html"><strong>OpenVZ</strong> San Diego, CA</a></li>
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/virtual.html"><strong>Xen</strong> Washington, DC</a></li>
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/virtual.html"><strong>Xen</strong> Chicago, IL</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="<?=SITE_TEMPLATE_PATH;?>/dedicated.html"><strong>Dedicated</strong> Servers<br /><span>cPanel or Unmanaged</span></a>
+                </li>
+                <li>
+                    <a class="dropdown" href="<?=SITE_TEMPLATE_PATH;?>/about.html"><strong>About</strong> Rackhost<br /><span>Who We Are</span></a>
+                    <ul class="dropdown">
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/team.html"><strong>Our</strong> Team</a></li>
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/locations.html"><strong>Datacenter</strong> Locations</a></li>
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/blog.html"><strong>Company</strong> Blog</a></li>
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/layout.html"><strong>Layout</strong> Elements</a></li>
+                        <li><a href="<?=SITE_TEMPLATE_PATH;?>/business.html"><strong>Business</strong> Theme</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=<?=SITE_TEMPLATE_PATH;?>/contact.html"><strong>Contact</strong> Us<br /><span>Custom Quotes</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Content Slider -->
+    <div class="contentSlider">
+        <div class="center">
+            <div class="slide clearfix">
+                <div class="slideSwitchLabel">
+                    <strong>Shared</strong> Hosting
+                </div>
+                <div class="information">
+                    <h1>Shared <span>Hosting</span></h1>
+                    <p>Powerful <strong>cPanel</strong> shared hosting on enterprise hardware.</p>
+                    <ul class="clearfix">
+                        <li><strong>96 MB</strong> Application Memory</li>
+                        <li><strong>20</strong> Addon Domains</li>
+                        <li><strong>10 GB</strong> Storage</li>
+                        <li><strong>400 GB</strong> Monthly Traffic</li>
+                    </ul>
+                    <div class="box clearfix">
+                        <div class="label">
+                            yearly<br />from
+                        </div>
+                        <div class="price">
+                            $69
+                        </div>
+                        <a class="colorButton" href="<?=SITE_TEMPLATE_PATH;?>/shared.html"><span class="pointer"><strong>View all</strong> available plans now</span></a>
+                    </div>
+                </div>
+                <img src="<?=SITE_TEMPLATE_PATH;?>/images/slider/sharedServer.png" alt="Shared" />
+            </div>
+            <div class="slide clearfix">
+                <div class="slideSwitchLabel">
+                    <strong>Virtual</strong> Servers
+                </div>
+                <div class="information">
+                    <h1>Virtual <span>Servers</span></h1>
+                    <p>Enterprise <strong>OpenVZ</strong> and <strong>Xen</strong> virtual servers on reliable nodes.</p>
+                    <ul class="clearfix">
+                        <li><strong>1x Intel Xeon</strong> Core 2.40GHz</li>
+                        <li><strong>256 MB</strong> DDR3 RAM</li>
+                        <li><strong>20 GB</strong> SATA2</li>
+                        <li><strong>1 TB</strong> Monthly Traffic</li>
+                    </ul>
+                    <div class="box clearfix">
+                        <div class="label">
+                            monthly<br />from
+                        </div>
+                        <div class="price">
+                            $12
+                        </div>
+                        <a class="colorButton" href="<?=SITE_TEMPLATE_PATH;?>/virtual.html"><span class="pointer"><strong>View all</strong> available plans now</span></a>
+                    </div>
+                </div>
+                <img src="<?=SITE_TEMPLATE_PATH;?>/images/slider/virtualServer.png" alt="Virtual" />
+            </div>
+            <div class="slide clearfix">
+                <div class="slideSwitchLabel">
+                    <strong>Dedicated</strong> Servers
+                </div>
+                <div class="information">
+                    <h1>Dedicated <span>Servers</span></h1>
+                    <p>Experience <strong>enterprise class</strong> dedicated resources at a fraction of a cost.</p>
+                    <ul class="clearfix">
+                        <li><strong>2x Intel Xeon</strong> 5620 2.40GHz</li>
+                        <li><strong>48 GB</strong> DDR3 RAM</li>
+                        <li><strong>4x 500 GB</strong> SAS 10.000 RPM</li>
+                        <li><strong>10 TB</strong> Monthly Traffic</li>
+                    </ul>
+                    <div class="box clearfix">
+                        <div class="label">
+                            monthly<br />from
+                        </div>
+                        <div class="price">
+                            $289
+                        </div>
+                        <a class="colorButton" href="<?=SITE_TEMPLATE_PATH;?>/dedicated.html"><span class="pointer"><strong>View all</strong> available plans now</span></a>
+                    </div>
+                </div>
+                <img src="<?=SITE_TEMPLATE_PATH;?>/images/slider/dedicatedServer.png" alt="Dedicated" />
+            </div>
+        </div>
+    </div>
+    <!-- Content Wrapper -->
+    <div class="contentWrapper">
